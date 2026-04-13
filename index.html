@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FONTES PARECIDAS COM O PDF -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
 <title>Júlio & Hellen</title>
 
 <style>
 body {
   margin: 0;
-  background: #f5efe6;
-  color: #5a4a42;
-  text-align: center;
+  background: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #6f8fa6;
 }
 
 /* TOPO */
@@ -23,119 +22,79 @@ body {
   padding: 40px 20px 10px;
 }
 
-.maos {
-  font-size: 30px;
-  opacity: 0.6;
-  margin-bottom: 10px;
+/* IMAGEM MÃOS */
+.maos img {
+  width: 120px;
+  opacity: 0.9;
 }
 
 /* NOMES */
 .nomes {
   font-family: 'Great Vibes', cursive;
   font-size: 42px;
-  margin: 10px 0;
+  margin-top: 15px;
 }
 
-/* TEXTO */
-.texto {
-  font-size: 13px;
-  letter-spacing: 2px;
-  margin: 10px 20px;
-}
-
-/* DATA */
-.data {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
+/* FOTO COM FADE */
+.foto-container {
+  position: relative;
   margin-top: 20px;
 }
 
-.hora {
-  font-size: 13px;
-  letter-spacing: 3px;
-}
-
-/* VERSO */
-.verso {
-  margin: 20px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  opacity: 0.8;
-}
-
-/* FOTO */
-.foto img {
+.foto-container img {
   width: 100%;
   max-width: 420px;
-  margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 0;
 }
 
-/* BOTÕES */
+/* FADE TOP */
+.fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(#f4f4f4, transparent);
+}
+
+/* FADE BOTTOM */
+.fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(transparent, #f4f4f4);
+}
+
+/* BOTÕES SOBRE A FOTO */
 .botoes {
-  margin: 20px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  width: 90%;
-  max-width: 350px;
+  display: block;
+  width: 85%;
+  max-width: 320px;
   margin: 10px auto;
-
   padding: 12px;
+
   border-radius: 30px;
-  border: 1px solid #d6cdc3;
+  border: 1px solid #9bb3c5;
 
-  background: #ffffff;
+  background: rgba(255,255,255,0.9);
+  color: #6f8fa6;
   text-decoration: none;
-  color: #5a4a42;
-
-  font-size: 14px;
+  font-size: 13px;
 }
 
-/* ICONE */
-.icon {
-  font-size: 16px;
-}
-
-/* TEXTO CLIQUE */
+/* TEXTO FINAL */
 .clique {
-  font-size: 12px;
   margin-top: 10px;
+  font-size: 11px;
   letter-spacing: 2px;
-}
-
-/* LEMBRE-SE */
-.lembre {
-  margin: 40px 20px;
-}
-
-.lembre h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-  font-weight: normal;
-}
-
-/* GRID */
-.lista {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-  font-size: 12px;
-}
-
-/* ÍCONES */
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  opacity: 0.8;
 }
 </style>
 </head>
@@ -144,60 +103,38 @@ body {
 
 <div class="topo">
 
-<div class="maos">🤝</div>
-
-<div class="nomes">Júlio & Hellen</div>
-
-<div class="texto">
-COM AMOR E CARINHO, CONVIDAMOS VOCÊ PARA<br>
-CELEBRAR NOSSO CASAMENTO EM
+<div class="maos">
+  <img src="maos.png" alt="Mãos dadas">
 </div>
 
-<div class="data">26 de junho 2026</div>
-<div class="hora">SEXTA - 16H</div>
-
-<div class="verso">
-"ESTE É O DIA QUE O SENHOR FEZ: SEJA PARA NÓS<br>
-DIA DE ALEGRIA E DE FELICIDADE."<br>
-SALMOS 118:24
+<div class="nomes">
+  Júlio e Hellen
 </div>
 
 </div>
 
-<div class="foto">
-  <img src="foto-casal.jpeg">
-</div>
+<div class="foto-container">
+
+<img src="foto-casal.jpeg">
+
+<div class="fade-top"></div>
+<div class="fade-bottom"></div>
 
 <div class="botoes">
 
 <a class="btn" href="https://www.google.com/maps/place/Buffet+Ana+Conceito/@-3.7376218,-38.5426611,1085m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c74908d505a80d:0x9fb3872fccc55fcd!8m2!3d-3.7376272!4d-38.5400862!16s%2Fg%2F1yhbl8lwn?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-  <span class="icon">📍</span> LOCALIZAÇÃO
+📍 LOCALIZAÇÃO
 </a>
 
 <a class="btn" href="https://forms.gle/VYU7MDo4SPLDYaYR6" target="_blank">
-  <span class="icon">✔</span> CONFIRME SUA PRESENÇA
+✔ CONFIRME SUA PRESENÇA
 </a>
 
-<a class="btn" href="https://juliocba.github.io/convite-casamento/" target="_blank">
-  <span class="icon">🎁</span> SUGESTÃO DE PRESENTE
+<a class="btn" href="https://juliocba.github.io/presente-casamento/" target="_blank">
+🎁 SUGESTÃO DE PRESENTE
 </a>
 
 <div class="clique">CLIQUE NOS BOTÕES</div>
-
-</div>
-
-<div class="lembre">
-
-<h2>Lembre-se de:</h2>
-
-<div class="lista">
-
-<div class="item">📅 Confirmar sua presença</div>
-<div class="item">⏰ Ser pontual</div>
-<div class="item">💍 Cerimônia às 16h</div>
-<div class="item">🥂 Aproveitar bastante</div>
-<div class="item">📸 Tirar uma foto com os noivos</div>
-<div class="item">👋 Não sair sem despedir</div>
 
 </div>
 
